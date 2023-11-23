@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#modal > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+#fade , #modal{
+    opacity: 1;
+}
+ 
+#fade{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.564);
+}
+ 
+#modal{
+    z-index: 10;
+    background-color:pink;
+    border: 1px solid mediumslateblue;
+    width: 40%;
+    height: 40%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+ 
+#modal.hide , #fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cabecalho{
+    padding: 3rem 10rem;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vw; 
+    color: mediumslateblue; 
+}
+.cabecalho img{
+    width: 6vw;
+    
+}
+.container{
+    padding: 3rem 5rem;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.card{
+    max-width: 25vw;
+    max-height: 90vh;
+
+}
+.card img{
+    width: 25vw;
+    height: 30vh;
+    
+}
+.card-title{
+    color: mediumslateblue;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card-text{
+    color: mediumslateblue;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+.card-valor{
+    color: mediumslateblue;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.card-qtd{
+    width: 100%;
+    padding: 0.3rem 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: pink;
+    color: mediumslateblue;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-link{
+    margin-top: 0.3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    color: mediumslateblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    border: 1px solid mediumslateblue;
+    border-radius: 0.5rem;   
+}
+.card-link:hover{
+    background-color: mediumslateblue;
+    color: pink;
+}
+.add{
+    color: mediumslateblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#pedido{
+    font-size: 2rem;
+    color: mediumslateblue;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+}
+
+#total-pedido{
+    
+    font-size:2rem;
+    color: mediumslateblue;
+    background-color: pink;
+    text-align: center;
+}
+.code{
+    background-color: pink;
+}
+.code img{
+    padding-top: 1rem;
+    
+       
+}
+#gerar{
+    font-size: 1rem;
+    text-decoration: none;
+    color: mediumslateblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid mediumslateblue;
+    border-radius: 0.5rem;
+    width: 30%;
+    margin: auto;
+    background-color: pink;
+    cursor: pointer;
+    
+}
+#gerar:hover{
+    background-color: mediumslateblue;
+    color: pink;
+}
+.rodape{
+    border-top: 1rem solid mediumslateblue;
+    background-color: pink;
+    text-align: center;
+    color: mediumslateblue;
+}

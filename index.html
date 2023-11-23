@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentina'Snacks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <div class="container-pedido">
+      <div id="pedido">
+
+      </div>
+      <div>
+          <p id="total-pedido"></p>
+      </div>
+    </div>
+        <div class="code">
+        <a onclick="GerarQRCode()" id="gerar">Gerar QRCode</a>
+        <br>
+        <img id="QRCodeImage">
+        </div>
+  </div>
+<header>
+    <div class="cabecalho">
+        <h1>Valentina'</h1>
+        <img src="https://i.pinimg.com/564x/fc/76/ba/fc76bad6ff9adee9897484285b6165e3.jpg" alt="">
+        <h1>Snacks</h1>
+        <img id="carrinho" src="img/icons8-adicionar-ao-carrinho-de-compras-100.png" alt="">
+    </div>
+</header>
+<main>
+  <div class="container">
+      <div class="card">
+        <img src="img/x-salada.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">X-Salada</h4>
+            <p class="card-text">Hamburguer bovino (Aprox. 100g in natura), muçarela, alface americana, tomate e maionese.</p>
+            <p class="card-valor">Apenas R$ <span class="valor">11.99</span> a unidade. </p>
+            <input type="number" class="card-qtd"name="" id="x-salada"><br>
+            <span class="add"></span>
+            <a class="card-link" href="#">Peça já!</a>
+          </div>
+      </div>
+
+          <div class="card">
+            <img src="img/combo x-salada.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Combo X-Salada</h4>
+              <p class="card-text">Hamburguer (Aprox. 100g in natura), muçarela, alface americana, tomate e maionese. Bebida e fritas!</p>
+              <p class="card-valor">Apenas R$ <span class="valor">18.99</span> . </p>
+              <input type="number" class="card-qtd"name="" id="combo-salada"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="img/x-bacon.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">X-Bacon</h4>
+              <p class="card-text">Hamburguer bovino (Aprox. 100g in natura), com o tempero especial, muçarela, bacon crocante e maionese.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">13.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="x-bacon"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="img/combo x-bacon.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Combo X-Bacon</h4>
+              <p class="card-text">Hamburguer bovino (Aprox. 100g in natura), com o tempero especial, muçarela, bacon e maionese. Bebida e fritas!</p>
+              <p class="card-valor">Apenas R$ <span class="valor">20.99</span> . </p>
+              <input type="number" class="card-qtd"name="" id="combo-bacon"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/batata.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Batata Frita</h4>
+              <p class="card-text">Generosa porção de batata frita crocante (Aprox. 270g in natura).</p>
+              <p class="card-valor">Apenas R$ <span class="valor">19.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="batata"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/salada.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Salada</h4>
+              <p class="card-text">Salada fresquinha de alface americana, cenoura ralada, tomate e repolho roxo.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">9.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="salada"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/salada carne.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Salada com iscas de carne</h4>
+              <p class="card-text">Iscas bovinas (Aprox. 110g in natura) e salada de alface americana, cenoura, tomate e repolho roxo.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">15.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="salada-carne"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/salada frango.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Salada com cubos de frango</h4>
+              <p class="card-text">Peito de frango (Aprox. 120g in natura) cortado em cubos e salada de alface americana, cenoura, tomate e repolho.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">14.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="salada-frango"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="img/bife_a_parmegiana.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Bife à Parmegiana</h4>
+              <p class="card-text">Delicioso corte maturado bovino (Aprox. 180g in natura) empanado e coberto por molho de tomate e muçarela, arroz e fritas.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">23.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="b-parmegiana"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="img/frango parmegiana.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Frango à Parmegiana</h4>
+              <p class="card-text">Filé de peito de frango (Aprox. 170g in natura) empanado e coberto por molho de tomate e muçarela, arroz e fritas.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">21.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="f-parmegiana"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/estrogonofe de carne.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Estrogonofe de carne</h4>
+              <p class="card-text">Irresistível molho de estrogonofe com iscas de carne (Aprox. 110g in natura), arroz e fritas. Contem champignon!</p>
+              <p class="card-valor">Apenas R$ <span class="valor">20.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="estrogonofe-c"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/estrogonofe.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Estrogonofe de frango</h4>
+              <p class="card-text">Irresistível molho de estrogonofe com cubos de frango (Aprox. 120g in natura), arroz e fritas. Contem champignon!</p>
+              <p class="card-valor">Apenas R$ <span class="valor">18.99</span> a unidade. </p>
+              <input type="number" class="card-qtd"name="" id="estrogonofe-f"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/coca.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Coca Cola</h4>
+              <p class="card-text">Copo 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">5.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="coca"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/coca zero.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Coca Cola Zero</h4>
+              <p class="card-text">Copo 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">5.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="c-zero"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/fanta.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Fanta Laranja</h4>
+              <p class="card-text">Copo 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">5.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="fanta"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/sprite.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Sprite</h4>
+              <p class="card-text">Copo 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">5.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="sprite"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/chá limao.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Chá gelado limão</h4>
+              <p class="card-text">Ice Tea Leão sabor limão garrafa 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">7.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="limao"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/cha pessego.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Chá gelado pêssego</h4>
+              <p class="card-text">Ice Tea Leão sabor pêssego garrafa 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">7.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="pessego"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/agua.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Água</h4>
+              <p class="card-text">Água mineral Crystal sem gás garrafa 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">3.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="agua"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/agua com gas.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Água com gás</h4>
+              <p class="card-text">Água mineral Crystal com gás garrafa 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">3.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="agua-g"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/chocolate.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Milk Shake de Chocolate</h4>
+              <p class="card-text">Copo 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">15.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="m-chocolate"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/morango.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Milk Shake de Morango</h4>
+              <p class="card-text">Copo 500ml.</p>
+              <p class="card-valor">Apenas R$ <span class="valor">15.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="m-morango"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/casquinha chocolate.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Casquinha de Chocolate</h4>
+              <p class="card-text">Casquinha crocante e sorvete delicioso de chocolate. É delicioso!</p>
+              <p class="card-valor">Apenas R$ <span class="valor">4.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="c-chocolate"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/baunilha.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Casquinha de Baunilha</h4>
+              <p class="card-text">Casquinha crocante e sorvete delicioso de baunilha. É refrescante!</p>
+              <p class="card-valor">Apenas R$ <span class="valor">4.99</span> a unidade. </p>
+              <input type="number" class="card-qtd" name="" id="baunilha"><br>
+              <span class="add"></span>
+              <a class="card-link" href="#">Peça já!</a>
+            </div>
+          </div>
+    </div>
+    
+</main>
+<footer>
+    <div class="rodape">
+    <h5>Valentina'Snacks 2023 - Todos os direitos reservados</h5>
+    <h5>St. C Norte Área Especial 2 - Taguatinga, Brasília - DF, 72115-700</h5>
+    </div>
+</footer>
+</body>
+</html>
